@@ -1,0 +1,14 @@
+
+    Get all entries without an e-mail attribute:
+
+        LDAP Filter Equivalent
+        (!(email=*))
+
+
+        Get-ADUser -Filter '-not Email -like "*"'
+
+        -or-
+
+        Get-ADUser -Filter 'Email -notlike "*"'
+
+MobilePhone

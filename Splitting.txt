@@ -1,0 +1,18 @@
+import-module activedirectory
+
+$m = get-aduser eamccormick1 -Properties *
+
+@($m).Count
+
+@(get-aduser eamccormick1 -Properties Manager).split(",", 1).split("=", 1)
+
+
+Write-Host "Press any key to continue ..."
+$x = $host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+
+write-host "Press any key to continue..."
+[void][System.Console]::ReadKey($true)
+
+cmd /c Pause | Out-Null
+
+# Split(strSeparator [, MaxSubstrings] [, Options])
