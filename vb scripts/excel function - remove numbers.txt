@@ -1,0 +1,7 @@
+Function RemoveNumbers(Txt As String) As String
+With CreateObject("VBScript.RegExp")
+.Global = True
+.Pattern = "[0-9]"
+RemoveNumbers = .Replace(Txt, "")
+End With
+End Function
